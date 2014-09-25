@@ -17,8 +17,13 @@ function evaluateId(){
         num3 = num1-num2;
     if(op_value== "multi")
         num3 = num1*num2;
-    if(op_value== "divide")
-        num3 = num1/num2; 
+    if(op_value== "divide"){
+        if (num2 == 0){
+            alert("Can not divide by 0.");
+            return -1;
+        }
+        num3 = num1/num2;
+    }
    // alert(num3);
     document.getElementById("result").value = num3;
     num1 = num3;
